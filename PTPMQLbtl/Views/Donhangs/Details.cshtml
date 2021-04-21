@@ -1,0 +1,27 @@
+﻿@model PTPMQLbtl.Models.Donhang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Donhang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaydathang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaydathang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Madonhang }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
