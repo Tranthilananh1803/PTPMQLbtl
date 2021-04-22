@@ -131,6 +131,7 @@
     <Compile Include="Controllers\ChitietdonhangsController.cs" />
     <Compile Include="Controllers\DanhmuchangsController.cs" />
     <Compile Include="Controllers\DonhangsController.cs" />
+    <Compile Include="Controllers\HoadonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachhangsController.cs" />
     <Compile Include="Controllers\NhomhangsController.cs" />
@@ -157,10 +158,19 @@
     <Compile Include="Migrations\202104200418169_Creat_Table_Nhomhang.Designer.cs">
       <DependentUpon>202104200418169_Creat_Table_Nhomhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104220342269_Creat_Table_Hoadon.cs" />
+    <Compile Include="Migrations\202104220342269_Creat_Table_Hoadon.Designer.cs">
+      <DependentUpon>202104220342269_Creat_Table_Hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104220848008_add.cs" />
+    <Compile Include="Migrations\202104220848008_add.Designer.cs">
+      <DependentUpon>202104220848008_add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Chitietdonhang.cs" />
     <Compile Include="Models\Danhmuchang.cs" />
     <Compile Include="Models\Donhang.cs" />
+    <Compile Include="Models\Hoadon.cs" />
     <Compile Include="Models\Khachhang.cs" />
     <Compile Include="Models\Nhomhang.cs" />
     <Compile Include="Models\PTPMQLDB.cs" />
@@ -576,6 +586,11 @@
     <Content Include="Views\Nhomhangs\Details.cshtml" />
     <Content Include="Views\Nhomhangs\Edit.cshtml" />
     <Content Include="Views\Nhomhangs\Index.cshtml" />
+    <Content Include="Views\Hoadons\Create.cshtml" />
+    <Content Include="Views\Hoadons\Delete.cshtml" />
+    <Content Include="Views\Hoadons\Details.cshtml" />
+    <Content Include="Views\Hoadons\Edit.cshtml" />
+    <Content Include="Views\Hoadons\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -608,6 +623,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104200418169_Creat_Table_Nhomhang.resx">
       <DependentUpon>202104200418169_Creat_Table_Nhomhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104220342269_Creat_Table_Hoadon.resx">
+      <DependentUpon>202104220342269_Creat_Table_Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104220848008_add.resx">
+      <DependentUpon>202104220848008_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

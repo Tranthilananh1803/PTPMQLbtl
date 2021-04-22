@@ -8,20 +8,14 @@ using System.Web.Mvc;
 
 namespace PTPMQLbtl.Models
 {
-    [Table("Donhang")]
-    public partial class Donhang
+    [Table("Hoadon")]
+    public class Hoadon
     {
-        
         [Key]
-
-        public int Madonhang { get; set; }
-        [AllowHtml]
-        
+        public int Sohoadon { get; set; }
+       [AllowHtml]
+        public DateTime Ngayban { get; set; }
         public int Makhachhang { get; set; }
-        public DateTime Ngaydathang { get; set; }
-
-    
-
-
+        public string Tenkhachhang { get; set; }
     }
 }

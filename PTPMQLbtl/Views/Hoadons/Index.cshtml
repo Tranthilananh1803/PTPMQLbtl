@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PTPMQLbtl.Models.Hoadon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HOA DON</h2>
+
+<p>
+    @Html.ActionLink("THEM HOA DON", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngayban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Makhachhang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenkhachhang)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngayban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Makhachhang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenkhachhang)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Sohoadon }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Sohoadon }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Sohoadon })
+        </td>
+    </tr>
+}
+
+</table>

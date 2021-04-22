@@ -36,7 +36,7 @@ namespace PTPMQLbtl.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.sysdiagrams");
+            
             DropTable("dbo.Chitietdonhang");
            
         }

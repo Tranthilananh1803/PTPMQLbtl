@@ -8,7 +8,7 @@ namespace PTPMQLbtl.Models
     public partial class PTPMQLDB : DbContext
     {
         public PTPMQLDB()
-            : base("name=PTPMQLDB3")
+            : base("name=PTPMQLDB")
         {
         }
 
@@ -19,6 +19,7 @@ namespace PTPMQLbtl.Models
         public virtual DbSet<Donhang> Donhangs { get; set; }
         public virtual DbSet<Nhomhang> Nhomhangs { get; set; }
         public virtual DbSet<Khachhang> Khachhangs { get; set; }
+        public virtual DbSet<Hoadon> Hoadons { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Chitietdonhang>()
@@ -45,6 +46,9 @@ namespace PTPMQLbtl.Models
             modelBuilder.Entity<Donhang>()
                .Property(e => e.Ngaydathang)
                .IsRequired();
+            modelBuilder.Entity<Donhang>()
+               .Property(e => e.Madonhang)
+               .IsRequired();
             modelBuilder.Entity<Khachhang>()
              .Property(e => e.Makhachhang)
              .IsRequired();
@@ -69,6 +73,12 @@ namespace PTPMQLbtl.Models
             modelBuilder.Entity<Nhomhang>()
           .Property(e => e.Mota)
           .IsRequired();
+            modelBuilder.Entity<Hoadon>()
+         .Property(e => e.Sohoadon)
+         .IsRequired();
+            modelBuilder.Entity<Hoadon>()
+         .Property(e => e.Ngayban)
+         .IsRequired();
         }
     }
 }
