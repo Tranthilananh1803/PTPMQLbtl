@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+
 
 namespace PTPMQLbtl.Models
 {
@@ -13,10 +13,10 @@ namespace PTPMQLbtl.Models
     { 
         [Key]
         public string Machitietdonhang { get; set; }
-        [AllowHtml]
+      
         public string Madonhang { get; set; }
         public string Mathang { get; set; }
-        public decimal Dongia { get; set; }
+        public string Dongia { get; set; }
         public int Soluong { get; set; }
 
     }

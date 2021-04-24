@@ -24,7 +24,7 @@ namespace PTPMQLbtl.Models
         {
             modelBuilder.Entity<Chitietdonhang>()
                   .Property(e => e.Dongia)
-                  .HasPrecision(19, 4);
+              .IsRequired();
             modelBuilder.Entity<Chitietdonhang>()
                .Property(e => e.Machitietdonhang)
                .IsFixedLength();
@@ -36,7 +36,7 @@ namespace PTPMQLbtl.Models
                .IsFixedLength();
             modelBuilder.Entity<Chitietdonhang>()
                   .Property(e => e.Dongia)
-                  .HasPrecision(19, 4);
+                .IsRequired();
             modelBuilder.Entity<Danhmuchang>()
                .Property(e => e.Tenhang)
                .IsFixedLength();

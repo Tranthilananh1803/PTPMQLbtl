@@ -166,6 +166,10 @@
     <Compile Include="Migrations\202104220848008_add.Designer.cs">
       <DependentUpon>202104220848008_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104241520529_adbc.cs" />
+    <Compile Include="Migrations\202104241520529_adbc.Designer.cs">
+      <DependentUpon>202104241520529_adbc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Chitietdonhang.cs" />
     <Compile Include="Models\Danhmuchang.cs" />
@@ -629,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104220848008_add.resx">
       <DependentUpon>202104220848008_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104241520529_adbc.resx">
+      <DependentUpon>202104241520529_adbc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
