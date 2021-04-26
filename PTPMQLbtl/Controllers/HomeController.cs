@@ -12,6 +12,7 @@ namespace PTPMQLbtl.Controllers
         {
             return View();
         }
+        [Authorize]
 
         public ActionResult About()
         {

@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChitietdonhangsController.cs" />
     <Compile Include="Controllers\DanhmuchangsController.cs" />
     <Compile Include="Controllers\DonhangsController.cs" />
@@ -170,10 +171,16 @@
     <Compile Include="Migrations\202104241520529_adbc.Designer.cs">
       <DependentUpon>202104241520529_adbc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104251527337_Create_Table_Account.cs" />
+    <Compile Include="Migrations\202104251527337_Create_Table_Account.Designer.cs">
+      <DependentUpon>202104251527337_Create_Table_Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Chitietdonhang.cs" />
     <Compile Include="Models\Danhmuchang.cs" />
     <Compile Include="Models\Donhang.cs" />
+    <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\Hoadon.cs" />
     <Compile Include="Models\Khachhang.cs" />
     <Compile Include="Models\Nhomhang.cs" />
@@ -595,6 +602,8 @@
     <Content Include="Views\Hoadons\Details.cshtml" />
     <Content Include="Views\Hoadons\Edit.cshtml" />
     <Content Include="Views\Hoadons\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -636,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104241520529_adbc.resx">
       <DependentUpon>202104241520529_adbc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104251527337_Create_Table_Account.resx">
+      <DependentUpon>202104251527337_Create_Table_Account.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

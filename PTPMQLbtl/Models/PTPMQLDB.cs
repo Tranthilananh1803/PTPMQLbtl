@@ -20,6 +20,7 @@ namespace PTPMQLbtl.Models
         public virtual DbSet<Nhomhang> Nhomhangs { get; set; }
         public virtual DbSet<Khachhang> Khachhangs { get; set; }
         public virtual DbSet<Hoadon> Hoadons { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Chitietdonhang>()
@@ -79,6 +80,12 @@ namespace PTPMQLbtl.Models
             modelBuilder.Entity<Hoadon>()
          .Property(e => e.Ngayban)
          .IsRequired();
+            modelBuilder.Entity<Account>()
+              .Property(e => e.Usename)
+              .IsRequired(); 
+            modelBuilder.Entity<Account>()
+               .Property(e => e.Password)
+               .IsRequired();
         }
     }
 }
