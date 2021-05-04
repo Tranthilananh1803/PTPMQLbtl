@@ -175,9 +175,9 @@
     <Compile Include="Migrations\202104251527337_Create_Table_Account.Designer.cs">
       <DependentUpon>202104251527337_Create_Table_Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105040306062_anh.cs" />
-    <Compile Include="Migrations\202105040306062_anh.Designer.cs">
-      <DependentUpon>202105040306062_anh.cs</DependentUpon>
+    <Compile Include="Migrations\202105040353299_Anh.cs" />
+    <Compile Include="Migrations\202105040353299_Anh.Designer.cs">
+      <DependentUpon>202105040353299_Anh.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -654,8 +654,8 @@
     <EmbeddedResource Include="Migrations\202104251527337_Create_Table_Account.resx">
       <DependentUpon>202104251527337_Create_Table_Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105040306062_anh.resx">
-      <DependentUpon>202105040306062_anh.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105040353299_Anh.resx">
+      <DependentUpon>202105040353299_Anh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

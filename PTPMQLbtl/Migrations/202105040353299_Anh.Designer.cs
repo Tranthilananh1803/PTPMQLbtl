@@ -7,13 +7,13 @@ namespace PTPMQLbtl.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class anh : IMigrationMetadata
+    public sealed partial class Anh : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(anh));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Anh));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105040306062_anh"; }
+            get { return "202105040353299_Anh"; }
         }
         
         string IMigrationMetadata.Source

@@ -117,7 +117,6 @@ namespace PTPMQLbtl.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -126,8 +125,9 @@ namespace PTPMQLbtl.Controllers
             }
             base.Dispose(disposing);
         }
+
         //upload file
-        private void UploadFile(HttpPostedFileBase file)
+        private ActionResult UploadFile(HttpPostedFileBase file)
         {
             //dat ten cho file
             string _FileName = "DanhMucHang.xlsx";
@@ -145,7 +145,8 @@ namespace PTPMQLbtl.Controllers
                 db.Danhmuchangs.Add(kh);
                 db.SaveChanges();
             }
-            //return View(Index);
+            
+                return View("Index");
             
         }
         //download file
@@ -230,7 +231,7 @@ namespace PTPMQLbtl.Controllers
             bulkcopy.WriteToServer(dt);
             con.Close();
         }
-
+       
         //upload file excel
         [HttpPost]
         public ActionResult Uploadfileexcel(HttpPostedFileBase file)
@@ -251,5 +252,6 @@ namespace PTPMQLbtl.Controllers
             }
             return View("Index");
         }
+        
     }
 }
