@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,9 +12,9 @@ namespace PTPMQLbtl.Models
     [Table("Danhmuchang")]
     public class Danhmuchang
     {
-        
+		
 
-        [Key]
+		[Key]
        
         public int Mathang { get; set; }
 
@@ -27,8 +28,7 @@ namespace PTPMQLbtl.Models
         public string Donvitinh { get; set; }
 
         
-        public decimal? Dongia { get; set; }
-
-      
-    }
+        public decimal Dongia { get; set; }
+		
+	}
 }

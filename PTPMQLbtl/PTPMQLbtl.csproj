@@ -175,6 +175,10 @@
     <Compile Include="Migrations\202104251527337_Create_Table_Account.Designer.cs">
       <DependentUpon>202104251527337_Create_Table_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105040306062_anh.cs" />
+    <Compile Include="Migrations\202105040306062_anh.Designer.cs">
+      <DependentUpon>202105040306062_anh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Chitietdonhang.cs" />
@@ -604,6 +608,7 @@
     <Content Include="Views\Hoadons\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Upload\Excel\DanhMucHang.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -648,6 +653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104251527337_Create_Table_Account.resx">
       <DependentUpon>202104251527337_Create_Table_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105040306062_anh.resx">
+      <DependentUpon>202105040306062_anh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,6 +7,7 @@
 
 <h2>DANH MUC HANG</h2>
 
+
 <p>
     @Html.ActionLink("THEM DANH MUC", "Create")
 </p>
@@ -24,23 +25,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tenhang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Donvitinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dongia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Mathang }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Mathang }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Mathang })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenhang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Donvitinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dongia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Mathang }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Mathang }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Mathang })
+            </td>
+        </tr>
+    }
 
 </table>
