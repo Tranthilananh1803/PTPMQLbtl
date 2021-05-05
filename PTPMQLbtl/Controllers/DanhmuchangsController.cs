@@ -117,14 +117,7 @@ namespace PTPMQLbtl.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        
 
         //upload file
         private ActionResult UploadFile(HttpPostedFileBase file)
@@ -147,7 +140,6 @@ namespace PTPMQLbtl.Controllers
             }
             
                 return View("Index");
-            
         }
         //download file
         public ActionResult DownloadFile()
@@ -157,7 +149,7 @@ namespace PTPMQLbtl.Controllers
             //chuyen file sang dang byte
             byte[] fileBytes = System.IO.File.ReadAllBytes(path + "FileMau.xlsx");
             //ten file khi download ve
-            string fileName = "FileDownLoad.xlsx";
+            string fileName = "DanhMucHang.xlsx";
             //tra ve file
             return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
         }
@@ -224,8 +216,8 @@ namespace PTPMQLbtl.Controllers
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["PTPMQLDB"].ConnectionString);
             SqlBulkCopy bulkcopy = new SqlBulkCopy(con);
             bulkcopy.DestinationTableName = "Danhmuchangs";
-            bulkcopy.ColumnMappings.Add(0, "Mathang");
-            bulkcopy.ColumnMappings.Add(1, "Tenhang");
+            bulkcopy.ColumnMappings.Add(0, "Tenhang");
+            bulkcopy.ColumnMappings.Add(1, "Donvitinh");
            
             con.Open();
             bulkcopy.WriteToServer(dt);
@@ -241,17 +233,24 @@ namespace PTPMQLbtl.Controllers
                 //upload file thanh cong va file co du lieu
                 if (file.ContentLength > 0)
                 {
-                    ViewBag.ThongBao = "Upload file than cong";
+                    ViewBag.ThongBao = "Upload file thanh cong";
                  
                }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 //neu upload file that bai
                 ViewBag.ThongBao = "Upload file that bai";
             }
             return View("Index");
         }
-        
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }
