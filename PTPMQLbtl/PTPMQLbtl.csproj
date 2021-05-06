@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HoadonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachhangsController.cs" />
+    <Compile Include="Controllers\NhanviensController.cs" />
     <Compile Include="Controllers\NhomhangsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,6 +180,14 @@
     <Compile Include="Migrations\202105040353299_Anh.Designer.cs">
       <DependentUpon>202105040353299_Anh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105060029086_Create_Table_Nhanvien.cs" />
+    <Compile Include="Migrations\202105060029086_Create_Table_Nhanvien.Designer.cs">
+      <DependentUpon>202105060029086_Create_Table_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105060205315_Anhs.cs" />
+    <Compile Include="Migrations\202105060205315_Anhs.Designer.cs">
+      <DependentUpon>202105060205315_Anhs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Chitietdonhang.cs" />
@@ -187,6 +196,7 @@
     <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\Hoadon.cs" />
     <Compile Include="Models\Khachhang.cs" />
+    <Compile Include="Models\Nhanvien.cs" />
     <Compile Include="Models\Nhomhang.cs" />
     <Compile Include="Models\PTPMQLDB.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
@@ -608,6 +618,11 @@
     <Content Include="Views\Hoadons\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Nhanviens\Create.cshtml" />
+    <Content Include="Views\Nhanviens\Delete.cshtml" />
+    <Content Include="Views\Nhanviens\Details.cshtml" />
+    <Content Include="Views\Nhanviens\Edit.cshtml" />
+    <Content Include="Views\Nhanviens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -656,6 +671,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105040353299_Anh.resx">
       <DependentUpon>202105040353299_Anh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105060029086_Create_Table_Nhanvien.resx">
+      <DependentUpon>202105060029086_Create_Table_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105060205315_Anhs.resx">
+      <DependentUpon>202105060205315_Anhs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
