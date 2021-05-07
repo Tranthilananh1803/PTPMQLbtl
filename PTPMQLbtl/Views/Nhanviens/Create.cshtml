@@ -6,14 +6,20 @@
 }
 
 <h2>Nhan vien</h2>
+@using (Html.BeginForm("UploadFile", "Nhanviens", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+        <input type="submit" value="Upload" />
+    </div>
+}
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -27,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TenNV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.TenNV, new { @class="ckeditor"})
+                @Html.TextAreaFor(model => model.TenNV, new { @class = "ckeditor" })
                 @Html.ValidationMessageFor(model => model.TenNV, "", new { @class = "text-danger" })
             </div>
         </div>

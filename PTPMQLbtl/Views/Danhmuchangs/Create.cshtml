@@ -7,13 +7,7 @@
 
 <h2>DANH MUC HANG</h2>
 
-@using (Html.BeginForm("UploadFile","Danhmuchangs", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    <div>
-        @Html.TextBox("file", "", new { type = "file" }) <br />
-        <input type="submit" value="Upload" />
-    </div>
-}
+
 
 @using (Html.BeginForm())
 {
