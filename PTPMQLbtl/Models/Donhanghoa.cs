@@ -5,19 +5,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-
 namespace PTPMQLbtl.Models
 {
-    [Table("Chitietdonhang")]
-    public class Chitietdonhang
-    { 
+    [Table("Donhanghoa")]
+    public class Donhanghoa
+    {
         [Key]
-        public string Machitietdonhang { get; set; }
-      
         public string Madonhang { get; set; }
-        public string Mathang { get; set; }
-        public string Dongia { get; set; }
-        public int Soluong { get; set; }
+
+        public string Tendonhang { get; set; }
+        
+        public int Sodonhang { get; set; }
+        [StringLength(200)]
+        public string Yeucau { get; set; }
 
     }
 }

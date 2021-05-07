@@ -1,4 +1,4 @@
-﻿@model PTPMQLbtl.Models.Donhang
+﻿@model PTPMQLbtl.Models.Donhanghoa
 
 @{
     ViewBag.Title = "Delete";
@@ -9,15 +9,31 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Donhang</h4>
+    <h4>Donhanghoa</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Ngaydathang)
+            @Html.DisplayNameFor(model => model.Tendonhang)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Ngaydathang)
+            @Html.DisplayFor(model => model.Tendonhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sodonhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sodonhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yeucau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yeucau)
         </dd>
 
     </dl>

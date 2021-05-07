@@ -120,46 +120,53 @@ namespace PTPMQLbtl.Controllers
         
 
         //upload file
-        private ActionResult UploadFile(HttpPostedFileBase file)
+        [HttpPost]
+        public ActionResult UploadFile(HttpPostedFileBase file)
         {
             //dat ten cho file
             string _FileName = "DanhMucHang.xlsx";
+
             //duong dan luu file
             string _path = Path.Combine(Server.MapPath("~/Uploads/Excels"), _FileName);
             //luu file len server
             file.SaveAs(_path);
+
             //doc du lieu tu file excel
             DataTable dt = ReadDataFromExcelFile(_path);
+
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 Danhmuchang kh = new Danhmuchang();            
-                kh.Tenhang = dt.Rows[1][0].ToString();
-                kh.Donvitinh = dt.Rows[1][1].ToString();
+                kh.Tenhang = dt.Rows[i][0].ToString();
+                kh.Donvitinh = dt.Rows[i][1].ToString();
                 db.Danhmuchangs.Add(kh);
                 db.SaveChanges();
             }
-            
-                return View("Index");
-        }
-        //download file
-        public ActionResult DownloadFile()
-        {
-            //duong dan chua file muon download
-            string path = AppDomain.CurrentDomain.BaseDirectory + "Uploads/Excels/";
-            //chuyen file sang dang byte
-            byte[] fileBytes = System.IO.File.ReadAllBytes(path + "FileMau.xlsx");
-            //ten file khi download ve
-            string fileName = "DanhMucHang.xlsx";
-            //tra ve file
-            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+            try
+            {
+                //upload file thanh cong va file co du lieu
+                if (file.ContentLength > 0)
+                {
+
+                    //CopyDataByBulk(ReadDataFromExcelFile(_path));
+                    ViewBag.ThongBao = "Upload file thanh cong";
+                }
+            }
+            catch (Exception ex)
+            {
+                //neu upload file that bai
+                ViewBag.ThongBao = "Upload file that bai";
+            }
+
+
+
+            return View ("Index");
         }
        
+       // private void CopyDataByBulk(object p)
         
-
-        private void CopyDataByBulk(object p)
-        {
-            throw new NotImplementedException();
-        }
+          //  throw new NotImplementedException();
+        
         //doc file excel tra ve du lieu dang datatable
         public DataTable ReadDataFromExcelFile(string filepath)
         {
@@ -224,26 +231,7 @@ namespace PTPMQLbtl.Controllers
             con.Close();
         }
        
-        //upload file excel
-        [HttpPost]
-        public ActionResult Uploadfileexcel(HttpPostedFileBase file)
-        {
-            try
-            {
-                //upload file thanh cong va file co du lieu
-                if (file.ContentLength > 0)
-                {
-                    ViewBag.ThongBao = "Upload file thanh cong";
-                 
-               }
-            }
-            catch (Exception )
-            {
-                //neu upload file that bai
-                ViewBag.ThongBao = "Upload file that bai";
-            }
-            return View("Index");
-        }
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing)

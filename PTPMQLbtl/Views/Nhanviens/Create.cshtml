@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Nhan Vien</h2>
+<h2>Nhan vien</h2>
 
 
 @using (Html.BeginForm()) 
@@ -27,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TenNV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.TenNV, new { @class = "ckeditor" })
+                @Html.TextAreaFor(model => model.TenNV, new { @class="ckeditor"})
                 @Html.ValidationMessageFor(model => model.TenNV, "", new { @class = "text-danger" })
             </div>
         </div>

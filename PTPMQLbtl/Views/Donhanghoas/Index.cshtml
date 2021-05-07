@@ -1,22 +1,25 @@
-﻿@model IEnumerable<PTPMQLbtl.Models.Donhang>
+﻿@model IEnumerable<PTPMQLbtl.Models.Donhanghoa>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>DON HANG</h2>
+<h2>Don hang hoa </h2>
 
 <p>
-    @Html.ActionLink("THEM DON HANG", "Create")
+    @Html.ActionLink("Them don hang","Creat")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Madonhang)
+            @Html.DisplayNameFor(model => model.Tendonhang)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ngaydathang)
+            @Html.DisplayNameFor(model => model.Sodonhang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yeucau)
         </th>
         <th></th>
     </tr>
@@ -24,7 +27,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Ngaydathang)
+            @Html.DisplayFor(modelItem => item.Tendonhang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sodonhang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yeucau)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Madonhang }) |

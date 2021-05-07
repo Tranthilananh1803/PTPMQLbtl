@@ -10,107 +10,107 @@ using PTPMQLbtl.Models;
 
 namespace PTPMQLbtl.Controllers
 {
-    public class DonhangsController : Controller
+    public class DonhanghoasController : Controller
     {
         private PTPMQLDB db = new PTPMQLDB();
 
-        // GET: Donhangs
+        // GET: Donhanghoas
         public ActionResult Index()
         {
             return View(db.Donhangs.ToList());
         }
 
-        // GET: Donhangs/Details/5
-        public ActionResult Details(int? id)
+        // GET: Donhanghoas/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Donhang donhang = db.Donhangs.Find(id);
-            if (donhang == null)
+            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            if (donhanghoa == null)
             {
                 return HttpNotFound();
             }
-            return View(donhang);
+            return View(donhanghoa);
         }
 
-        // GET: Donhangs/Create
+        // GET: Donhanghoas/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Donhangs/Create
+        // POST: Donhanghoas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Madonhang,Ngaydathang")] Donhang donhang)
+        public ActionResult Create([Bind(Include = "Madonhang,Tendonhang,Sodonhang,Yeucau")] Donhanghoa donhanghoa)
         {
             if (ModelState.IsValid)
             {
-                db.Donhangs.Add(donhang);
+                db.Donhangs.Add(donhanghoa);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(donhang);
+            return View(donhanghoa);
         }
 
-        // GET: Donhangs/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Donhanghoas/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Donhang donhang = db.Donhangs.Find(id);
-            if (donhang == null)
+            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            if (donhanghoa == null)
             {
                 return HttpNotFound();
             }
-            return View(donhang);
+            return View(donhanghoa);
         }
 
-        // POST: Donhangs/Edit/5
+        // POST: Donhanghoas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Madonhang,Ngaydathang")] Donhang donhang)
+        public ActionResult Edit([Bind(Include = "Madonhang,Tendonhang,Sodonhang,Yeucau")] Donhanghoa donhanghoa)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(donhang).State = EntityState.Modified;
+                db.Entry(donhanghoa).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(donhang);
+            return View(donhanghoa);
         }
 
-        // GET: Donhangs/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: Donhanghoas/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Donhang donhang = db.Donhangs.Find(id);
-            if (donhang == null)
+            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            if (donhanghoa == null)
             {
                 return HttpNotFound();
             }
-            return View(donhang);
+            return View(donhanghoa);
         }
 
-        // POST: Donhangs/Delete/5
+        // POST: Donhanghoas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            Donhang donhang = db.Donhangs.Find(id);
-            db.Donhangs.Remove(donhang);
+            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            db.Donhangs.Remove(donhanghoa);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

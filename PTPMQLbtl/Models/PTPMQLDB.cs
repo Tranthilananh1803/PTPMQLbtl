@@ -14,43 +14,26 @@ namespace PTPMQLbtl.Models
 
       
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Chitietdonhang> Chitietdonhangs { get; set; }
+        
         public virtual DbSet<Danhmuchang> Danhmuchangs { get; set; }
-        public virtual DbSet<Donhang> Donhangs { get; set; }
+       
         public virtual DbSet<Nhomhang> Nhomhangs { get; set; }
         public virtual DbSet<Khachhang> Khachhangs { get; set; }
         public virtual DbSet<Hoadon> Hoadons { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Nhanvien>Nhanviens{ get; set; }
+        public virtual DbSet<Nhacungcap> Nhacungcaps { get; set; }
+        public virtual DbSet<Donhanghoa> Donhangs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Chitietdonhang>()
-                  .Property(e => e.Dongia)
-              .IsRequired();
-            modelBuilder.Entity<Chitietdonhang>()
-               .Property(e => e.Machitietdonhang)
-               .IsFixedLength();
-            modelBuilder.Entity<Chitietdonhang>()
-            .Property(e => e.Madonhang)
-            .IsFixedLength();
-            modelBuilder.Entity<Chitietdonhang>()
-               .Property(e => e.Mathang)
-               .IsFixedLength();
-            modelBuilder.Entity<Chitietdonhang>()
-                  .Property(e => e.Dongia)
-                .IsRequired();
+            
             modelBuilder.Entity<Danhmuchang>()
                .Property(e => e.Tenhang)
                .IsFixedLength();
             modelBuilder.Entity<Danhmuchang>()
                .Property(e => e.Donvitinh)
                .IsFixedLength();
-            modelBuilder.Entity<Donhang>()
-               .Property(e => e.Ngaydathang)
-               .IsRequired();
-            modelBuilder.Entity<Donhang>()
-               .Property(e => e.Madonhang)
-               .IsRequired();
+           
             modelBuilder.Entity<Khachhang>()
              .Property(e => e.Makhachhang)
              .IsRequired();
@@ -93,6 +76,32 @@ namespace PTPMQLbtl.Models
             modelBuilder.Entity<Nhanvien>()
                .Property(e => e.TenNV)
                .IsRequired();
+            modelBuilder.Entity<Nhacungcap>()
+            .Property(e => e.MaNCC)
+            .IsRequired();
+            modelBuilder.Entity<Nhacungcap>()
+          .Property(e => e.TenNCC)
+          .IsRequired();
+           
+            modelBuilder.Entity<Nhacungcap>()
+          .Property(e => e.Diachi)
+          .IsRequired();
+            modelBuilder.Entity<Nhacungcap>()
+          .Property(e => e.Sodienthoai)
+          .IsRequired();
+            modelBuilder.Entity<Donhanghoa>()
+           .Property(e => e.Madonhang)
+           .IsRequired();
+            modelBuilder.Entity<Donhanghoa>()
+          .Property(e => e.Tendonhang)
+          .IsRequired();
+
+            modelBuilder.Entity<Donhanghoa>()
+          .Property(e => e.Sodonhang)
+          .IsRequired();
+            modelBuilder.Entity<Donhanghoa>()
+          .Property(e => e.Yeucau)
+          .IsRequired();
         }
     }
 }
