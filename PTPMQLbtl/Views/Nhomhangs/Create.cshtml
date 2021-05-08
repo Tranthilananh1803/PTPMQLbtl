@@ -7,13 +7,19 @@
 
 <h2>NHOM HANG</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("UploadFile", "Nhomhangs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+        <input type="submit" value="Upload" />
+    </div>
+}
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-       
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

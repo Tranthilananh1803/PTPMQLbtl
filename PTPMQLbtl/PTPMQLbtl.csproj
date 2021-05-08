@@ -176,6 +176,10 @@
     <Compile Include="Migrations\202105070917317_Create_Table_Donhanghoa.Designer.cs">
       <DependentUpon>202105070917317_Create_Table_Donhanghoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105071518252_anh.cs" />
+    <Compile Include="Migrations\202105071518252_anh.Designer.cs">
+      <DependentUpon>202105071518252_anh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Danhmuchang.cs" />
@@ -656,6 +660,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105070917317_Create_Table_Donhanghoa.resx">
       <DependentUpon>202105070917317_Create_Table_Donhanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071518252_anh.resx">
+      <DependentUpon>202105071518252_anh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
