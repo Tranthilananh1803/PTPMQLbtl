@@ -130,7 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DanhmuchangsController.cs" />
-    <Compile Include="Controllers\DonhanghoasController.cs" />
+    <Compile Include="Controllers\DonhangsController.cs" />
     <Compile Include="Controllers\HoadonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachhangsController.cs" />
@@ -172,18 +172,18 @@
     <Compile Include="Migrations\202105070625389_Create_Table_Nhacungcap.Designer.cs">
       <DependentUpon>202105070625389_Create_Table_Nhacungcap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105070917317_Create_Table_Donhanghoa.cs" />
-    <Compile Include="Migrations\202105070917317_Create_Table_Donhanghoa.Designer.cs">
-      <DependentUpon>202105070917317_Create_Table_Donhanghoa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202105071518252_anh.cs" />
     <Compile Include="Migrations\202105071518252_anh.Designer.cs">
       <DependentUpon>202105071518252_anh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105081436201_Create_Table_Donhang.cs" />
+    <Compile Include="Migrations\202105081436201_Create_Table_Donhang.Designer.cs">
+      <DependentUpon>202105081436201_Create_Table_Donhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Danhmuchang.cs" />
-    <Compile Include="Models\Donhanghoa.cs" />
+    <Compile Include="Models\Donhang.cs" />
     <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\Hoadon.cs" />
     <Compile Include="Models\Khachhang.cs" />
@@ -610,11 +610,11 @@
     <Content Include="Views\Nhanviens\Details.cshtml" />
     <Content Include="Views\Nhanviens\Edit.cshtml" />
     <Content Include="Views\Nhanviens\Index.cshtml" />
-    <Content Include="Views\Donhanghoas\Create.cshtml" />
-    <Content Include="Views\Donhanghoas\Delete.cshtml" />
-    <Content Include="Views\Donhanghoas\Details.cshtml" />
-    <Content Include="Views\Donhanghoas\Edit.cshtml" />
-    <Content Include="Views\Donhanghoas\Index.cshtml" />
+    <Content Include="Views\Donhangs\Create.cshtml" />
+    <Content Include="Views\Donhangs\Delete.cshtml" />
+    <Content Include="Views\Donhangs\Details.cshtml" />
+    <Content Include="Views\Donhangs\Edit.cshtml" />
+    <Content Include="Views\Donhangs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -658,11 +658,11 @@
     <EmbeddedResource Include="Migrations\202105070625389_Create_Table_Nhacungcap.resx">
       <DependentUpon>202105070625389_Create_Table_Nhacungcap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105070917317_Create_Table_Donhanghoa.resx">
-      <DependentUpon>202105070917317_Create_Table_Donhanghoa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105071518252_anh.resx">
       <DependentUpon>202105071518252_anh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105081436201_Create_Table_Donhang.resx">
+      <DependentUpon>202105081436201_Create_Table_Donhang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

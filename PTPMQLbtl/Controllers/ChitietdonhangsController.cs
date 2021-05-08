@@ -27,7 +27,7 @@ namespace PTPMQLbtl.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            Chitietdonhang donhanghoa = db.Donhangs.Find(id);
             if (donhanghoa == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace PTPMQLbtl.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Madonhang,Tendonhang,Sodonhang,Yeucau")] Donhanghoa donhanghoa)
+        public ActionResult Create([Bind(Include = "Madonhang,Tendonhang,Sodonhang,Yeucau")] Chitietdonhang donhanghoa)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace PTPMQLbtl.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            Chitietdonhang donhanghoa = db.Donhangs.Find(id);
             if (donhanghoa == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace PTPMQLbtl.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Madonhang,Tendonhang,Sodonhang,Yeucau")] Donhanghoa donhanghoa)
+        public ActionResult Edit([Bind(Include = "Madonhang,Tendonhang,Sodonhang,Yeucau")] Chitietdonhang donhanghoa)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace PTPMQLbtl.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            Chitietdonhang donhanghoa = db.Donhangs.Find(id);
             if (donhanghoa == null)
             {
                 return HttpNotFound();
@@ -109,7 +109,7 @@ namespace PTPMQLbtl.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Donhanghoa donhanghoa = db.Donhangs.Find(id);
+            Chitietdonhang donhanghoa = db.Donhangs.Find(id);
             db.Donhangs.Remove(donhanghoa);
             db.SaveChanges();
             return RedirectToAction("Index");

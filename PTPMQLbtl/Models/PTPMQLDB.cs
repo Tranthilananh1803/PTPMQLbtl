@@ -23,7 +23,8 @@ namespace PTPMQLbtl.Models
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Nhanvien>Nhanviens{ get; set; }
         public virtual DbSet<Nhacungcap> Nhacungcaps { get; set; }
-        public virtual DbSet<Donhanghoa> Donhangs { get; set; }
+        public virtual DbSet<Donhang> Donhangs { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             
@@ -89,18 +90,14 @@ namespace PTPMQLbtl.Models
             modelBuilder.Entity<Nhacungcap>()
           .Property(e => e.Sodienthoai)
           .IsRequired();
-            modelBuilder.Entity<Donhanghoa>()
+            modelBuilder.Entity<Donhang>()
            .Property(e => e.Madonhang)
            .IsRequired();
-            modelBuilder.Entity<Donhanghoa>()
-          .Property(e => e.Tendonhang)
+            modelBuilder.Entity<Donhang>()
+          .Property(e => e.Chitiethang)
           .IsRequired();
-
-            modelBuilder.Entity<Donhanghoa>()
-          .Property(e => e.Sodonhang)
-          .IsRequired();
-            modelBuilder.Entity<Donhanghoa>()
-          .Property(e => e.Yeucau)
+            modelBuilder.Entity<Donhang>()
+          .Property(e => e.Ngaydathang)
           .IsRequired();
         }
     }
