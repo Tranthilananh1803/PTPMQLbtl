@@ -25,6 +25,7 @@ namespace PTPMQLbtl.Controllers
         }
 
         // GET: Nhacungcaps/Details/5
+        [Authorize]
         public ActionResult Details(string id)
         {
             if (id == null)

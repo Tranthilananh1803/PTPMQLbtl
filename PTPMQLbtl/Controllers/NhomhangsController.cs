@@ -25,6 +25,7 @@ namespace PTPMQLbtl.Controllers
         }
 
         // GET: Nhomhangs/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)

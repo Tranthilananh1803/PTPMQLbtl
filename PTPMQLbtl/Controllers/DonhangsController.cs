@@ -21,6 +21,7 @@ namespace PTPMQLbtl.Controllers
         }
 
         // GET: Donhangs/Details/5
+        [Authorize]
         public ActionResult Details(string id)
         {
             if (id == null)
